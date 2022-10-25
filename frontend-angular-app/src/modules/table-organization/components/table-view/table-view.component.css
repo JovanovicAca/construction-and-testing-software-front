@@ -1,0 +1,39 @@
+.example-box {
+  height: 3000px;
+  width: 100%;
+}
+.example-handle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ccc;
+  cursor: move;
+  width: 24px;
+  height: 24px;
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.right {
+  margin-top: 2px;
+  margin-right: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.EMPTY {
+  /* background-color: azure */
+  background-color: azure;
+}
+.RESERVED {
+  background-color: greenyellow;
+}
+.OCCUPIED {
+  background-color: lightcoral;
+}

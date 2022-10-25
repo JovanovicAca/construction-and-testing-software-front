@@ -1,0 +1,20 @@
+<gridster [options]="options" style="background-color: darkturquoise">
+  <gridster-item
+    style="background-color: azure"
+    [item]="item"
+    *ngFor="let item of dashboard"
+    class="table-color"
+  >
+    <div class="center">
+      {{ item["tableNumber"] }}
+    </div>
+    <div class="right">
+      <mat-icon
+        color="warning"
+        (mousedown)="removeItem($event, item)"
+        (touchstart)="removeItem($event, item)"
+        >close</mat-icon
+      >
+    </div>
+  </gridster-item>
+</gridster>

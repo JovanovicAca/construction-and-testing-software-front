@@ -1,0 +1,22 @@
+<div class="page">
+  <div class="login-worker-form">
+    <mat-form-field appearance="fill" class="form-field">
+      <input
+        matInput
+        class="center-text"
+        [value]="value"
+        readonly
+        placeholder="Enter password"
+      />
+    </mat-form-field>
+    <!-- <button>Login as administration</button> -->
+    <div>
+      <app-login-numpad
+        (clickButtonEvent)="clickButton($event)"
+      ></app-login-numpad>
+    </div>
+  </div>
+  <div class="login-worker-image">
+    <img src="../../../../assets/login-worker.svg" />
+  </div>
+</div>

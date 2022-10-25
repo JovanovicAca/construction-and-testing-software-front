@@ -1,0 +1,39 @@
+<div class="dish-form">
+    <div class="ingredient-row">
+        <mat-form-field class="example-full-width ingr-row" appearance="fill">
+            <mat-label>Drink Menu Name</mat-label>
+            <input matInput placeholder="Ex. Special Wines from 18th century">
+        </mat-form-field>
+    </div>
+    <div class="price-purchasePrice-row">
+
+        <mat-form-field appearance="fill" class="input-form">
+            <mat-label>Starting date</mat-label>
+            <input matInput>
+            <mat-datepicker-toggle matSuffix></mat-datepicker-toggle>
+            <!-- <mat-datepicker startView="year" [startAt]="startDate"></mat-datepicker> -->
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="input-form">
+            <mat-label>Ending Date</mat-label>
+            <input matInput>
+            <mat-datepicker-toggle matSuffix></mat-datepicker-toggle>
+            <!-- <mat-datepicker startView="year" [startAt]="startDate"></mat-datepicker> -->
+        </mat-form-field>
+    </div>
+    <div class="ingredient-row">
+        <mat-form-field appearance="fill" class="ingr-row">
+            <mat-label>Ingredients</mat-label>
+            <mat-select [formControl]="toppings" multiple>
+                <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div class="buttons-row">
+        <button>Save</button>
+        <button 
+            id="backBtn"
+            [routerLink]="['/foodMenues']"
+        >Back</button>
+    </div>
+</div>

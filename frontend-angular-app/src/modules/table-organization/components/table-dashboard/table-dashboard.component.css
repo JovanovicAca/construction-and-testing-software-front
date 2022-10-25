@@ -1,0 +1,7 @@
+.dashboard > * {
+  margin: 5px;
+}
+
+.right-button {
+  float: right;
+}

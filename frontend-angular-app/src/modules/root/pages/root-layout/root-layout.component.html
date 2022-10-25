@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <div class="row primer">
+    <div class="col">
+      <!-- <app-header-manager></app-header-manager> -->
+      <!-- <app-header-cheff></app-header-cheff> -->
+      <app-header-cook></app-header-cook>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <router-outlet (activate)="checkRole()"></router-outlet>
+    </div>
+  </div>
+</div>

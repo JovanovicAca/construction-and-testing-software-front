@@ -1,0 +1,29 @@
+<!-- <h1>{{ name }}</h1>
+<mat-selection-list>
+  <mat-list-item *ngFor="let orderItem of orderItems">
+    {{ orderItem.name }} x {{ orderItem.quantity }} -
+    {{ orderItem.dish_status }}
+    <button mat-icon-button>
+      <mat-icon class="mat-24">delete</mat-icon>
+    </button>
+  </mat-list-item>
+</mat-selection-list> -->
+<mat-list>
+  <div mat-subheader>Dishes</div>
+  <mat-list-item *ngFor="let orderItem of orderItems">
+    {{ orderItem.name }} x {{ orderItem.quantity }} -
+    {{ orderItem.dish_status }}
+    <button mat-icon-button>
+      <mat-icon class="mat-24">delete</mat-icon>
+    </button>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <div mat-subheader>Drinks</div>
+  <mat-list-item *ngFor="let orderItem of drinkItems">
+    {{ orderItem.name }} x {{ orderItem.quantity }} -
+    {{ orderItem.dish_status }}
+    <button mat-icon-button>
+      <mat-icon class="mat-24">delete</mat-icon>
+    </button>
+  </mat-list-item>
+</mat-list>

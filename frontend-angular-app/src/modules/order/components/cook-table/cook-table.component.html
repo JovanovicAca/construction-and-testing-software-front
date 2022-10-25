@@ -1,0 +1,53 @@
+<div class="mat-elevation-z8" id="pendingDishes">
+  <table mat-table [dataSource]="orderItems">
+    <!-- Position Column -->
+    <ng-container matColumnDef="name">
+      <th
+        mat-header-cell
+        *matHeaderCellDef
+        mat-sort-header
+        sortActionDescription="Sort by name"
+      >
+        Dish Name
+      </th>
+      <td mat-cell *matCellDef="let element">{{ element.menuItem.name }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="quantity">
+      <th mat-header-cell *matHeaderCellDef>Quantity</th>
+      <td mat-cell *matCellDef="let element">{{ element.quantity }}</td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef>Dish Status</th>
+      <td mat-cell *matCellDef="let element">{{ element.dish_status }}</td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="allergy">
+      <th mat-header-cell *matHeaderCellDef>Allergy Note</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.allergyDescription }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef>Take Order</th>
+      <td mat-cell *matCellDef="let element">
+        <button
+          mat-icon-button
+          color="primary"
+          (click)="dishStatusServe(element.id)"
+          title="Take this Order"
+        >
+          <mat-icon>done</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

@@ -1,0 +1,12 @@
+.create-dish-view{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+}
+.dish-image{
+    margin-top: 5%;
+    margin-left: 10%;
+}
+.dish-image *{
+    width: 90%;
+}

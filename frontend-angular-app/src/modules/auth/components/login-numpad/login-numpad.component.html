@@ -1,0 +1,8 @@
+<div class="padding" *ngFor="let value1 of values">
+  <app-login-button
+    class="padding"
+    (clickButtonEvent)="clickButton($event)"
+    *ngFor="let value of value1"
+    [input]="value"
+  ></app-login-button>
+</div>

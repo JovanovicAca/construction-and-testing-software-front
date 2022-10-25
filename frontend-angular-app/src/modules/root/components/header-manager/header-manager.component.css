@@ -1,0 +1,12 @@
+.header-cheff{
+    width: 102.4%;
+    height: 9vh;;
+    position: relative;
+    background-color: #6C63FF;
+    left: -2%;
+    display: flex;
+}
+.header-cheff .items{
+    margin-left: auto;
+    margin-right: auto;
+}

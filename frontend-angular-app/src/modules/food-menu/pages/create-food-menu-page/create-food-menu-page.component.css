@@ -1,0 +1,12 @@
+.create-food-menu-view{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+}
+.food-menu-image{
+    margin-top: 5%;
+    margin-left: 7%;
+}
+.food-menu-image *{
+    width: 80%;
+}

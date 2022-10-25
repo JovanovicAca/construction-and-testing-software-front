@@ -1,0 +1,76 @@
+<form #drinkForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="dish-form">
+        <div class="name-type-row">
+            <mat-form-field class="example-full-width input-form" appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Ex. Cheese" required id="name" name="name" [(ngModel)]="drink.name">
+            </mat-form-field>
+            <mat-form-field class="example-full-width input-form" appearance="fill">
+                <mat-label>Drink Type</mat-label>
+                <mat-select [formControl]="toppings" required required id="drinkType" name="drinkType"
+                    [(ngModel)]="drink.drinkType">
+                    <mat-option *ngFor="let type of drinkTypes" [value]="type">{{type}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="description-recipe-row">
+            <mat-form-field class="example-full-width input-form" appearance="fill">
+                <mat-label>Description</mat-label>
+                <textarea class="texarea-form" matInput required id="description" name="description"
+                    [(ngModel)]="drink.description"></textarea>
+            </mat-form-field>
+            <mat-form-field class="example-full-width input-form" appearance="fill">
+                <mat-label>Recipe</mat-label>
+                <textarea class="texarea-form" matInput required id="recipe" name="recipe"
+                    [(ngModel)]="drink.recipe"></textarea>
+            </mat-form-field>
+        </div>
+        <div class="price-purchasePrice-row">
+            <mat-form-field class="example-full-width input-form" appearance="fill">
+                <mat-label>Preparation Price</mat-label>
+                <input matInput required type="number" min="1" id="prepPrice" name="prepPrice"
+                    [(ngModel)]="drink.preparationPrice">
+            </mat-form-field>
+            <mat-form-field class="example-full-width input-form" appearance="fill">
+                <mat-label>Purchase Price</mat-label>
+                <input matInput required type="number" min="1" id="purchasePrice" name="purchasePrice"
+                    [(ngModel)]="drink.purchasePrice">
+            </mat-form-field>
+        </div>
+        <div class="discount-preparationTime-row">
+            <mat-form-field class="example-full-width input-form" appearance="fill">
+                <mat-label>Discount</mat-label>
+                <input matInput id="discount" name="discount" [(ngModel)]="drink.discount">
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="example-full-width input-form">
+                <mat-label>Ingredients</mat-label>
+                <mat-select [formControl]="toppings" multiple id="ingredientSelect" name="ingredientSelect"
+                    [(ngModel)]="drink.ingredients" required>
+                    <!--   <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>-->
+                    <mat-option *ngFor="let ing of ingredients" [value]="ing">{{ing}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <!-- <mat-form-field class="example-full-width input-form" appearance="fill">
+                <mat-label>Preparation Time</mat-label>
+                <input matInput required type="number" min="1" id="prepTime" name="prepTime"
+                    [(ngModel)]="drink.preparationTime">
+            </mat-form-field> -->
+        </div>
+
+        <!-- <div class="ingredient-row">
+            <mat-form-field appearance="fill" class="ingr-row">
+                <mat-label>Ingredients</mat-label>
+                <mat-select [formControl]="toppings" multiple id="ingredientSelect" name="ingredientSelect"
+                    [(ngModel)]="drink.ingredients" required>
+                       <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+                    <mat-option *ngFor="let ing of ingredients" [value]="ing">{{ing}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+    </div>
+    -->
+        <div class="buttons-row">
+            <button class="btn btn-success" [disabled]="!drinkForm.form.valid">Save</button>
+            <button id="backBtn" [routerLink]="['/drinks']">Back</button>
+        </div>
+    </div>
+</form>

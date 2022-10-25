@@ -1,0 +1,60 @@
+<div class="create-ingredient-view">
+  <div class="ingredient-form">
+    <form #ingredientForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <mat-form-field class="example-full-width input-form" appearance="fill">
+          <mat-label>Name</mat-label>
+          <input
+            matInput
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Ex. Cheese"
+            [(ngModel)]="ingredient.name"
+            name="name"
+            #name="ngModel"
+            required
+          />
+        </mat-form-field>
+        <!-- <mat-error *ngIf="ingredient.name.invalid">{{
+          getErrorMessage()
+        }}</mat-error> -->
+      </div>
+      <div class="form-group">
+        <mat-form-field class="example-full-width input-form" appearance="fill">
+          <mat-label>Price</mat-label>
+          <input
+            matInput
+            type="number"
+            class="form-control"
+            id="price"
+            placeholder="Ex. 100"
+            [(ngModel)]="ingredient.price"
+            name="price"
+            min="1"
+            required
+          />
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-slide-toggle
+          class="toggle-btn"
+          id="isAllergic"
+          [(ngModel)]="ingredient.isAllergic"
+          name="isAllergic"
+          >Is Allergen ?</mat-slide-toggle
+        >
+      </div>
+      <button
+        type="submit"
+        class="btn btn-success"
+        [disabled]="!ingredientForm.form.valid"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+  <div class="ingredient-image">
+    <img src="../../../../../assets/ingredient.svg" />
+  </div>
+</div>

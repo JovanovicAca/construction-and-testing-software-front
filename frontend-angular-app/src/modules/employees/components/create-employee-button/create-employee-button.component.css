@@ -1,0 +1,14 @@
+button{
+    width: 220px;
+    height: 5vh;
+    background-color: #6C63FF;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    margin-top: 45%;
+    position: relative;
+    left: 593.5%;
+}
+button:hover{
+    background-color: #6b63ffbe;
+}

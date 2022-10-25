@@ -1,0 +1,13 @@
+.header-button{
+    background-color: transparent;
+    width: 12rem;
+    height: 100%;
+    border: 0;
+    color: white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.header-button:hover{
+    background-color: #d8c8c836;
+}

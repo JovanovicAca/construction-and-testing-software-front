@@ -1,0 +1,71 @@
+#main-employee-login{
+    width: 80%;
+    height: 100vh;
+}
+#main-administration-login{
+    width: 80%;
+    height: 100vh;
+    opacity: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#main-buttons{
+    width: 20%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 80%;
+    border-left: 3px solid black;
+}
+
+#employee-input-bar{
+    width: 100%;
+    height: 20%;
+    margin-right: auto;
+    margin-left: auto;
+}
+#employee-password-input{
+    width: 35%;
+    height: 55%;
+    border-radius: 25px;
+    outline: none;
+    font-size: 80px;
+    text-align: center;
+    position: relative;
+    top: 35%;
+    left: 34%;
+}
+#main-employee-buttons{
+    width: 55%;
+    height: 70%;
+    position: absolute;
+    left: 15%;
+    top:25%;
+}
+#row-one button,
+#row-two button,
+#row-three button,
+#row-four button{
+    width: 30%;
+    height: 15vh;
+    margin-right: 2.5%;
+    margin-bottom: 2.5%;
+    border-radius: 20px;
+    font-size: 50px;
+}
+
+#change-login-view-btn,
+#exit-app-btn{
+    width: 75%;
+    position: relative;
+    left: 13%;
+    top: 8.5%;
+    height: 70px;
+    border: 0;
+    border-radius: 20px;
+}
+#exit-app-btn{
+    top:78%;
+}

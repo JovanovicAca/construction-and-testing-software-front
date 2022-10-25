@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-flat-button color="primary" [routerLink]="['/']">Home</button>
+    <button mat-flat-button color="primary" [routerLink]="['/order/pending']">
+      Pending dishes
+    </button>
+    <button mat-flat-button color="primary" [routerLink]="['/ingredients']">
+      ingredients
+    </button>
+    <button mat-flat-button color="primary" [routerLink]="['/dishes']">
+      Dishes
+    </button>
+    <button mat-flat-button color="primary" [routerLink]="['/drinks']">
+      Drinks
+    </button>
+    <button mat-flat-button color="primary" [routerLink]="['/table/admin']">
+      Table organization
+    </button>
+    <button mat-flat-button color="primary" [routerLink]="['/reports']">
+      Reports
+    </button>
+    <button mat-flat-button color="primary" (click)="logout()">Logout</button>
+  </mat-toolbar-row>
+</mat-toolbar>

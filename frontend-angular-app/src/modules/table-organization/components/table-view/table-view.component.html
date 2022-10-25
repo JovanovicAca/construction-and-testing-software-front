@@ -1,0 +1,19 @@
+<!-- <app-table-admin-view
+    *ngFor="let table of tables"
+    [table]="table"
+    (deleteTableEvent)="deleteTable($event)"
+  ></app-table-admin-view> -->
+
+<gridster [options]="options" style="background-color: darkturquoise">
+  <gridster-item
+    [ngClass]="item['tableStatus']"
+    [item]="item"
+    *ngFor="let item of dashboard"
+    (click)="clickTable(item)"
+  >
+    <div class="center">
+      {{ item["tableNumber"] }}
+      <div>Table status: {{ item["tableStatus"] }}</div>
+    </div>
+  </gridster-item>
+</gridster>

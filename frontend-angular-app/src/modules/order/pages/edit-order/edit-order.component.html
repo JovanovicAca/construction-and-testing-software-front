@@ -1,0 +1,19 @@
+<div>
+  <app-order-table
+    [order]="order"
+    (serveOrderEvent)="serveOrderItem($event)"
+    (sendToKitchenEvent)="sendToKitchen($event)"
+  ></app-order-table>
+</div>
+
+<div>
+  <button
+    mat-raised-button
+    color="primary"
+    style="float: right; margin: 5px"
+    [disabled]="!finishOrder"
+    (click)="saveOrder()"
+  >
+    Finish order
+  </button>
+</div>

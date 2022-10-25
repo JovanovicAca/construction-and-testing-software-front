@@ -1,0 +1,13 @@
+.food-menu-table h1{
+    font-size: 50px;
+    margin-left: 2.3%;
+    margin-top: 4%;
+  }
+  .food-menu-table div{
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 0%;
+  }
+  .food-menu-table div table{
+    width: 100%;
+  } 

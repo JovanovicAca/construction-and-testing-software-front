@@ -1,0 +1,13 @@
+.header {
+  width: 500px;
+}
+.footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+}
+
+mat-list {
+  flex-grow: 1;
+  overflow: auto;
+}

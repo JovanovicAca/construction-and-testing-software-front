@@ -1,0 +1,24 @@
+<div class="float-child">
+  <mat-tab-group animationDuration="0ms">
+    <mat-tab label="Dishes">
+      <app-menu-item-order
+        type="dish"
+        (addItemEvent)="addDishItem($event)"
+      ></app-menu-item-order>
+    </mat-tab>
+    <mat-tab label="Drinks">
+      <app-menu-item-order
+        type="drink"
+        (addItemEvent)="addDrinkItem($event)"
+      ></app-menu-item-order>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+<div class="float-child1">
+  <app-order-dashboard
+    [dishOrderItems]="dishOrderItems"
+    [drinkOrderItems]="drinkOrderItems"
+    [orderPrice]="orderPrice"
+    (saveOrderEvent)="saveOrder()"
+  ></app-order-dashboard>
+</div>

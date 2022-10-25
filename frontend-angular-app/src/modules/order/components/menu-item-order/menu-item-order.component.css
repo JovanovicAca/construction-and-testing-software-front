@@ -1,0 +1,47 @@
+.example-card {
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+.search-field {
+  float: right;
+  padding-right: 10px;
+  max-width: 300px;
+  padding-top: 5px;
+}
+.example-form-field {
+  max-width: 75px;
+}
+.fixed-size-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.fixed-size h1 {
+  margin: auto;
+}
+.fixed-size {
+  width: 100px;
+  height: 100px;
+  background-color: #990b47;
+  color: #fff;
+  display: flex;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.center-text {
+  text-align: center;
+}
+.input-buttons {
+  margin: 5px;
+}
+/* .footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+} */

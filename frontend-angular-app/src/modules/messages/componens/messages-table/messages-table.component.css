@@ -1,0 +1,13 @@
+.ingredient-table h1{
+    font-size: 50px;
+    margin-left: 2.3%;
+    margin-top: 4%;
+  }
+  .ingredient-table div{
+    width: 55%;
+    margin-left: 2.5%;
+    margin-top: 0%;
+  }
+  .ingredient-table div table{
+    width: 100%;
+  } 

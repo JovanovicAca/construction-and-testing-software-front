@@ -1,0 +1,19 @@
+<div class="header">
+  <h1 class="order">Order</h1>
+  <hr />
+</div>
+<div class="containter-fluid">
+  <div class="row">
+    <app-order-item-list
+      name="Dish"
+      [orderItems]="dishOrderItems"
+      [drinkItems]="drinkOrderItems"
+    ></app-order-item-list>
+  </div>
+  <div class="footer">
+    Order total: {{ orderPrice }}
+    <button mat-raised-button color="primary" (click)="saveOrder()">
+      Finish order
+    </button>
+  </div>
+</div>

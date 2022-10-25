@@ -1,0 +1,18 @@
+<app-table-dashboard
+  (addTableEvent)="addTable()"
+  (addBarEvent)="addBar()"
+  (saveTableOrganizationEvent)="saveTableOrganization()"
+></app-table-dashboard>
+
+<div class="table-box">
+  <mat-progress-bar [mode]="mode"> </mat-progress-bar>
+  <app-table-admin-view
+    class="example-boundary"
+    [dashboard]="dashboard"
+  ></app-table-admin-view>
+</div>
+
+<!-- <app-table-view
+    class="example-boundary"
+    [dashboard]="dashboard"
+  ></app-table-view> -->

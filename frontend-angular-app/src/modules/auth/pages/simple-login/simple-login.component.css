@@ -1,0 +1,40 @@
+.page{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.login-worker-image{
+  width: 45%;
+  height: 100vh;
+}
+.login-worker-image img{
+  width: 100%;
+  margin-left: 15%;
+  margin-top: 11%;
+}
+.login-worker-form{
+  width: 55%;
+  height: 100vh;
+  margin-left: 20%;
+}
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.center-text {
+  text-align: center;
+}
+.middle {
+  margin: auto;
+  width: 900px;
+  padding: 10px;
+}
+.form-field {
+  width: 500px !important;
+  font-size: 25px !important;
+  background-color: transparent; /* replace this color with your accent color hex code */
+}

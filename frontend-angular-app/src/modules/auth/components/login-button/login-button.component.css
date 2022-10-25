@@ -1,0 +1,6 @@
+.button-size {
+  width: 150px !important;
+  height: 150px !important;
+  min-width: unset !important;
+  font-size: 100px !important;
+}

@@ -1,0 +1,10 @@
+/* .ingredient-table table {
+  width: 50%;
+  height: 13vh;
+} */
+#pendingDishes * {
+  width: 50%;
+}
+table {
+  width: 100%;
+}

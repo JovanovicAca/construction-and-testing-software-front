@@ -1,0 +1,66 @@
+<form #dishForm="ngForm" (ngSubmit)="onSubmit()">
+  <div class="dish-form">
+        <div class="name-type-row">
+            <mat-form-field class="example-full-width input-form" appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Ex. Pizza" required id="name" name="name" [(ngModel)]="dish.name">
+            </mat-form-field>
+            <mat-form-field class="example-full-width input-form" appearance="fill">
+                <mat-label>Dish Type</mat-label>
+                <mat-select [formControl]="toppings" required required id="dishType" name="dishType"
+                    [(ngModel)]="dish.dishType">
+                    <mat-option *ngFor="let type of dishTypes" [value]="type">{{type}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="description-recipe-row">
+            <mat-form-field class="example-full-width input-form" appearance="fill">
+                <mat-label>Description</mat-label>
+                <textarea class="texarea-form" matInput required id="description" name="description"
+                    [(ngModel)]="dish.description"></textarea>
+            </mat-form-field>
+            <mat-form-field class="example-full-width input-form" appearance="fill">
+                <mat-label>Recipe</mat-label>
+                <textarea class="texarea-form" matInput required id="recipe" name="recipe"
+                    [(ngModel)]="dish.recipe"></textarea>
+            </mat-form-field>
+        </div>
+        <div class="price-purchasePrice-row">
+            <mat-form-field class="example-full-width input-form" appearance="fill">
+                <mat-label>Preparation Price</mat-label>
+                <input matInput required type="number" min="1" id="prepPrice" name="prepPrice"
+                    [(ngModel)]="dish.preparationPrice">
+            </mat-form-field>
+            <mat-form-field class="example-full-width input-form" appearance="fill">
+                <mat-label>Purchase Price</mat-label>
+                <input matInput required type="number" min="1" id="purchasePrice" name="purchasePrice"
+                    [(ngModel)]="dish.purchasePrice">
+            </mat-form-field>
+        </div>
+        <div class="discount-preparationTime-row">
+            <mat-form-field class="example-full-width input-form" appearance="fill">
+                <mat-label>Discount</mat-label>
+                <input matInput id="discount" name="discount" [(ngModel)]="dish.discount">
+            </mat-form-field>
+            <mat-form-field class="example-full-width input-form" appearance="fill">
+                <mat-label>Preparation Time</mat-label>
+                <input matInput required type="number" min="1" id="prepTime" name="prepTime"
+                    [(ngModel)]="dish.preparationTime">
+            </mat-form-field>
+        </div>
+        <div class="ingredient-row">
+            <mat-form-field appearance="fill" class="ingr-row">
+                <mat-label>Ingredients</mat-label>
+                <mat-select [formControl]="toppings" multiple id="ingredientSelect" name="ingredientSelect"
+                    [(ngModel)]="dish.ingredients" required>
+                    <mat-option *ngFor="let ing of ingredients" [value]="ing">{{ing}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div class="buttons-row">
+            <button class="btn btn-success" [disabled]="!dishForm.form.valid">Save</button>
+            <button id="backBtn" [routerLink]="['/dishes']">Back</button>
+        </div>
+    </div>
+</form>

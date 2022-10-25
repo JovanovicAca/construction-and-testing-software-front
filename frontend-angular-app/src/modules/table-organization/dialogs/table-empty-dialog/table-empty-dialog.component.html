@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Empty table dialog</h1>
+<div mat-dialog-content>Table {{ data["id"] }} is currently empty.</div>
+<div mat-dialog-content>You can reserve the table or create new order.</div>
+<div mat-dialog-actions align="end">
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="createOrder()"
+    mat-dialog-close
+  >
+    Create new order
+  </button>
+  <!-- <button mat-raised-button color="primary" mat-dialog-close>
+    Reserve table
+  </button> -->
+  <button mat-raised-button color="primary" mat-dialog-close>Close</button>
+</div>

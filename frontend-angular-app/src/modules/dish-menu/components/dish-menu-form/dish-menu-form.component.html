@@ -1,0 +1,41 @@
+<form #dishMenuForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="dish-form">
+        <div class="ingredient-row">
+            <mat-form-field class="example-full-width ingr-row" appearance="fill">
+                <mat-label>Dish Menu Name</mat-label>
+                <input matInput placeholder="Ex. Special Wines from 18th century" required id="name" name="name" [(ngModel)]="dishMenu.menuName">
+            </mat-form-field>
+        </div>
+        <div class="price-purchasePrice-row">
+
+            <mat-form-field appearance="fill" class="input-form">
+                <mat-label>Starting date</mat-label>
+                <input matInput placeholder="Ex. 11/10/2016, 11:49:36 AM" required id="startDate" name="startDate" [(ngModel)]="dishMenu.startDate">
+                <mat-datepicker-toggle matSuffix></mat-datepicker-toggle>
+                <!-- <mat-datepicker startView="year" [startAt]="startDate"></mat-datepicker> -->
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="input-form">
+                <mat-label>Ending Date</mat-label>
+                <input matInput placeholder="Ex. 11/10/2018, 11:49:36 AM" required id="endDate" name="endDate" [(ngModel)]="dishMenu.endDate">
+                <mat-datepicker-toggle matSuffix></mat-datepicker-toggle>
+                <!-- <mat-datepicker startView="year" [startAt]="startDate"></mat-datepicker> -->
+            </mat-form-field>
+        </div>
+        <div class="ingredient-row">
+            <mat-form-field appearance="fill" class="ingr-row">
+                <mat-label>Ingredients</mat-label>
+                <mat-select [formControl]="toppings" multiple>
+                    <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div class="buttons-row">
+            <button class="btn btn-success" [disabled]="!dishMenuForm.form.valid">Save</button>
+            <button 
+                id="backBtn"
+                [routerLink]="['/foodMenues']"
+            >Back</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,6 @@
+<div *ngFor="let order of orders">
+  <p>Order - {{ order.id }}</p>
+  <div *ngFor="let orderItem of order.orderItems">
+    <p>{{ orderItem.menuItem?.name }} - {{ orderItem.dish_status }}</p>
+  </div>
+</div>

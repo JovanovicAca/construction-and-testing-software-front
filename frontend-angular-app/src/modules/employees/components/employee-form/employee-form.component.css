@@ -1,0 +1,53 @@
+.employee-form{
+    width: 700px;
+    height: 80vh;
+    margin-left: 100px;
+    margin-top: 70px;
+}
+.name-type-row,
+.username-row,
+.birth-gender-row,
+.paycheck-email-row{
+    display: flex;
+    margin-bottom: 30px;
+}
+/* .texarea-form{
+    resize: vertical; 
+    max-height: 100px;
+} */
+.input-form{
+    width: 40%;
+    margin-right: 80px;
+}
+.restaurant-row form{
+    width: 100%;
+}
+.res-row{
+    width: 89%;
+}
+.buttons-row{
+    width: 300px;
+    position: relative;
+    left: 27%;
+    top: 5%;
+}
+.buttons-row *{
+    width: 250px;
+    height: 5vh;
+    margin-bottom: 25px;
+    margin-right: 150px;
+    border: 0;
+    background-color: #6C63FF;
+    color: white;
+  }
+  .buttons-row *:hover{
+    background-color: #6b63ffb2;
+  }
+  #backBtn{
+    background-color: transparent;
+    color: black;
+    border: 1px #6C63FF solid;
+  }
+  #backBtn:hover{
+    background-color: #6b63ff6e;
+  }
